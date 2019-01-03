@@ -1,13 +1,13 @@
 import React, {Component} from "react";
 import {Text, View, StyleSheet, Animated, TouchableWithoutFeedback} from "react-native";
 
-class Opacity extends Component {
+class Scale extends Component {
   state = {
     animation: new Animated.Value(1)// it is not necessary to set this in state, can be set any where
   };
   handleAnimation = () => {
     Animated.timing(this.state.animation, {
-      toValue: 0,
+      toValue: -2,// - will flip the box  while scaling and + will only scale
       duration: 650,
     }).start(() => {
       Animated.timing(this.state.animation, {
@@ -19,13 +19,17 @@ class Opacity extends Component {
 
   render() {
     let animationStyles = {
-      opacity: this.state.animation
+      transform: [
+        {
+          scaleX: this.state.animation // scale scaleY scaleX
+        }
+      ]
     };
     return (
         <View style={styles.container}>
           <TouchableWithoutFeedback onPress={this.handleAnimation}>
             <Animated.View style={[{justifyContent: "center", alignItems: "center"}, styles.box, animationStyles]}>
-              <Text> Opacity </Text>
+              <Text> Scale </Text>
             </Animated.View>
           </TouchableWithoutFeedback>
         </View>
@@ -33,7 +37,7 @@ class Opacity extends Component {
   }
 }
 
-export default Opacity;
+export default Scale;
 let styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -44,5 +48,6 @@ let styles = StyleSheet.create({
     width: 150,
     height: 150,
     backgroundColor: "orange"
-  }
+  },
+
 });
