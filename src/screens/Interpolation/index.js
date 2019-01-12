@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, Animated, TouchableWithoutFeedback } from "react-native";
+import { StyleSheet, View, Animated, TouchableWithoutFeedback } from "react-native";
 
 class Interpolation extends Component {
   state = {
@@ -35,7 +35,7 @@ class Interpolation extends Component {
 
     const textAnimatedStyles = {
       color: colorInterpolation
-    }
+    };
 
     return (
         <View style={styles.container}>

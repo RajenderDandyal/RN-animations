@@ -6,7 +6,12 @@ export let screenNames = {
   widthHeight:"WidthHeight",
   absolute:"Absolute",
   interpolation:'Interpolation',
-  rotate:'Rotate'
+  rotate:'Rotate',
+  easing:"EasingAnimation",
+  spring:"Spring",
+  loop:"Loop",
+  events:"Events",
+  dragAndThrowUsingDecay:"DragAndThrowUsingDecay"
 };
 export let componentIds = {
   animationStack: "AnimationStack"
