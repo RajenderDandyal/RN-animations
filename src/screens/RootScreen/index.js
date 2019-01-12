@@ -18,13 +18,18 @@ class RootScreen extends Component {
       {text: screenNames.loop, key: 9},
       {text: screenNames.events, key: 10},
       {text: screenNames.dragAndThrowUsingDecay, key: 11},
+      {text: screenNames.parallel, key: 12},
+      {text: screenNames.sequence, key: 13},
+      {text: screenNames.stagger, key: 14},
+      {text: screenNames.delay, key: 15},
+      {text: screenNames.extrapolate, key: 16},
     ]
   };
 
   handlePress = (indexPosition) => {
     let pressedBtn = this.state.btn.filter(item => item.key === indexPosition)
     NavigateUser(componentIds.animationStack, pressedBtn[0].text)
-  }
+  };
 
   render() {
     return (

@@ -4,7 +4,7 @@ import { StyleSheet, View, Animated, ScrollView } from "react-native";
 export default class Events extends Component {
   state = {
     animation: new Animated.Value(0),
-  }
+  };
   render() {
 
     const backgroundInterpolate = this.state.animation.interpolate({
@@ -14,7 +14,7 @@ export default class Events extends Component {
 
     const backgroundStyle = {
       backgroundColor: backgroundInterpolate
-    }
+    };
     return (
         <View style={styles.container}>
           <ScrollView

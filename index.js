@@ -13,6 +13,11 @@ import Spring from "./src/screens/Spring";
 import Loop from "./src/screens/Loop";
 import Events from "./src/screens/Events";
 import DragAndThrowUsingDecay from "./src/screens/Drag&throwUsingDecay";
+import Parallel from "./src/screens/Parallel";
+import Sequence from "./src/screens/Sequence";
+import Stagger from "./src/screens/Stagger";
+import Delay from "./src/screens/Delay";
+import Extrapolate from "./src/screens/Extrapolate";
 
 Navigation.registerComponent(screenNames.rootScreen, () => RootScreen);
 Navigation.registerComponent(screenNames.opacity, () => Opacity);
@@ -27,6 +32,11 @@ Navigation.registerComponent(screenNames.spring, () => Spring);
 Navigation.registerComponent(screenNames.loop, () => Loop);
 Navigation.registerComponent(screenNames.events, () => Events);
 Navigation.registerComponent(screenNames.dragAndThrowUsingDecay, () => DragAndThrowUsingDecay);
+Navigation.registerComponent(screenNames.parallel, () => Parallel);
+Navigation.registerComponent(screenNames.sequence, () => Sequence);
+Navigation.registerComponent(screenNames.stagger, () => Stagger);
+Navigation.registerComponent(screenNames.delay, () => Delay);
+Navigation.registerComponent(screenNames.extrapolate, () => Extrapolate);
 
 const stack = {
   children: [
